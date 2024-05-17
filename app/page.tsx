@@ -4,17 +4,7 @@ export default function PanoDateResolver(){
 	return <>
 		<h1>pano date resolver</h1>
 		<p className = "description">
-			find out when a given pano was taken with an accuracy of up to 10 minutes.
-		</p>
-		<p className = "description">
-			<i>note:</i> may not work for some panos.
-			{" "}
-			<span
-				className = "tooltip"
-				data-tooltip = "sadly, getting the exact date requires some trickery which can fail (especially for gen 3 and older)"
-			>
-				hover here for details
-			</span>
+			find out when a given pano was taken with an accuracy of up to 10 minutes. (works ~90% of the time in my experience).
 		</p>
 		<p className = "description">
 			<b>note: this tool currently doesn't support shortened (goo.gl) links, paste the full url!</b>
