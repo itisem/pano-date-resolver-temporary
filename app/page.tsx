@@ -21,8 +21,8 @@ export default function PanoDateResolver(){
 		</p>
 		<p className = "description">
 			note: this is a placeholder url for the tool, i eventually want to bundle it with a rework of all my other mapping tools.
-			when that happens, i'll turn this url into a redirect.
-			<a href = "https://geo.emily.bz">here is a link to all my other streetview tools for the time being.</a>
+			when that happens, i'll turn this url into a redirect.&nbsp;
+			<a href = "https://geo.emily.bz"><u>here is a link</u></a> to all my other streetview tools for the time being.
 		</p>
 		<DateResolverCore />
 	</>
