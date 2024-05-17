@@ -37,7 +37,7 @@ export default async function resolvePanoDate(location: Location, options?: Reso
 				lat: location.lat,
 				lng: location.lng
 			},
-			radius: 100
+			radius: 30
 		},
 		queryOptions: {
 			clientCapabilities: {
