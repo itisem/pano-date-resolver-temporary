@@ -16,8 +16,14 @@ export default function PanoDateResolver(){
 				hover here for details
 			</span>
 		</p>
-		<p><b>note: this tool currently doesn't support shortened (goo.gl) links, paste the full url!</b></p>
-		<p>note: this is a placeholder url for the tool, i eventually want to bundle it with a rework of all my other mapping tools. when that happens, i'll turn this into a redirect.</p>
+		<p className = "description">
+			<b>note: this tool currently doesn't support shortened (goo.gl) links, paste the full url!</b>
+		</p>
+		<p className = "description">
+			note: this is a placeholder url for the tool, i eventually want to bundle it with a rework of all my other mapping tools.
+			when that happens, i'll turn this url into a redirect.
+			<a href = "https://geo.emily.bz">here is a link to all my other streetview tools for the time being.</a>
+		</p>
 		<DateResolverCore />
 	</>
 }
