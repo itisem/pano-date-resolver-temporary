@@ -1,0 +1,257 @@
+/* globals */
+
+:root{
+	--background: #ffeecc;
+	--background-light: #fff5e0;
+	--text: #222222;
+	--text-dark: #000000;
+	--text-medium: #888888;
+	--text-light: #eeeeee;
+	--highlight: #fb4570;
+	--highlight-light: #fc5e83;
+	--selection: #7b1e7a;
+	--selection-light: #90238e;
+	--error: #880000;
+	--menu-semitransparent: #ffffff44;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("PT Sans"),
+		url("../public/PTSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("PT Sans"),
+		url("../public/PTSans-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("PT Sans"),
+		url("../public/PTSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: local("PT Sans"),
+		url("../public/PTSans-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+
+*{
+	transition: all 0.2s ease-in-out;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* body */
+
+body{
+	background: var(--background);
+	color: var(--text);
+	font-family: "PT Sans";
+}
+
+::selection{
+	background: var(--selection);
+	color: var(--background);
+}
+
+main{
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+/* descriptions */
+
+.description{
+	color: var(--selection);
+	margin: 10px 0px;
+}
+
+/* inputs */
+
+input[type="text"], input[type="password"], input[type="number"]{
+	background: var(--background-light);
+	border: 1px solid var(--highlight);
+	border-radius: 10px;
+	padding: 5px;
+	color: var(--highlight);
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus{
+	background: var(--background);
+	outline: none;
+	border: 1px solid var(--selection);
+	color: var(--selection);
+}
+
+input[type="number"]{
+	text-align: right;
+}
+
+button{
+	background: var(--selection);
+	color: var(--background);
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	cursor: pointer;
+	margin: 2px;
+}
+
+button:hover{
+	color: var(--highlight);
+}
+
+select{
+	background: var(--background);
+	border: 1px solid var(--highlight);
+	padding: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+option{
+	background: var(--background-light);
+}
+
+/* tooltips */
+
+.tooltip{
+	position: relative;
+	cursor: help;
+	border-bottom: 1px dashed var(--text);
+}
+
+.tooltip:before{
+	content: attr(data-tooltip);
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 250px;
+	padding: 5px;
+	border-radius: 10px;
+	background: var(--highlight);
+	color: var(--text-light);
+	text-align: center;
+	display: none;
+}
+
+.tooltip:hover:before{
+	display: block;
+}
+
+/* links */
+
+a{
+	color: var(--selection);
+	text-decoration: none;
+	background: linear-gradient(-90deg, transparent 0%, transparent 50%, var(--selection) 50%, var(--selection) 100%);
+	background-size: 400% 100%;
+	background-position: right;
+}
+
+a:hover{
+	color: var(--highlight);
+	background-position: 20%;
+}
+
+/* lists */
+
+ul, ol{
+	padding-left: 20px;
+}
+
+/* text */
+
+p{
+	text-align: justify;
+}
+
+/* errors */
+
+.error{
+	color: var(--error);
+}
+
+/* summary and details */
+
+summary{
+	cursor: pointer;
+	font-weight: bold;
+	padding-top: 1rem;
+	padding-left: 2rem;
+	position: relative;
+	list-style-type: none;
+	transition: 0.2s margin-bottom;
+}
+
+details > summary::-webkit-details-marker{
+	display: none;
+}
+
+summary:before {
+	/* adding a triangle as content is not enough because it's unaffected by transform */
+	content: "";
+	border-top: 0.4rem solid transparent;
+	border-bottom: 0.4rem solid transparent;
+	border-left: 0.4rem solid var(--text);
+	position: absolute;
+	top: 1.3rem;
+	left: 1rem;
+	transform: rotate(0);
+	transition: 0.2s transform;
+}
+
+details[open] > summary:before {
+	transform: rotate(90deg);
+}
+
+details[open] > summary ~ *{
+	animation: 0.2s sweep-in forwards;
+}
+
+/* standalonepage parts */
+
+.settings{
+	width: 100%;
+	border: 1px solid var(--highlight);
+	border-radius: 10px;
+	padding: 0px 2px 3px 2px;
+}
+
+.settings h3{
+	width: 100%;
+	background: var(--background-light);
+	margin: 2px 0px 0px 0px;
+}
+
+.settings h3:first-of-type{
+	margin: 0px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+/* mobile friendly styling */
+
+@media(max-width: 1600px){
+	main{
+		margin-top: 30px;
+		padding: 0px 3px;
+	}
+
+	#hamburger{
+		left: -10px;
+	}
+}

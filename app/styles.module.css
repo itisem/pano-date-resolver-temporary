@@ -1,0 +1,28 @@
+.panoURL{
+	width: calc(100% - 120px);
+	font-size: 1.2em;
+}
+
+.resolveButton{
+	width: 100px;
+	font-size: 1.2em;
+}
+
+.date{
+	white-space: pre-wrap;
+}
+
+.date::before{
+	content: " ";
+	background: var(--highlight);
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	mask: url("../public/clock.svg");
+	mask-size: 15px 15px;
+	margin-right: 10px;
+}
+
+.info{
+	margin-top: 10px;
+}

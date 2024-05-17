@@ -1,0 +1,1749 @@
+{
+  "nested": {
+    "SingleImageSearchRequest": {
+      "oneofs": {
+        "query": {
+          "oneof": [
+            "location",
+            "gpsFeatureDescriptionInternal",
+            "feature"
+          ]
+        }
+      },
+      "fields": {
+        "context": {
+          
+          "type": "RequestContext",
+          "id": 1
+        },
+        "location": {
+          "type": "PhotoByLatLngQuery",
+          "id": 2
+        },
+        "gpsFeatureDescriptionInternal": {
+          "type": "FeatureDescription",
+          "id": 7
+        },
+        "feature": {
+          "type": "PhotoByFeatureQuery",
+          "id": 8
+        },
+        "queryOptions": {
+          "type": "PhotoQueryOptions",
+          "id": 3
+        },
+        "responseSpecification": {
+          "type": "MetadataResponseSpecification",
+          "id": 4
+        },
+        "imageKey": {
+          "type": "ImageKey",
+          "id": 5
+        },
+        "pixelSpecification": {
+          "type": "PixelResponseSpecification",
+          "id": 6
+        },
+        "referrerUrl": {
+          "type": "string",
+          "id": 9
+        }
+      }
+    },
+    "SingleImageSearchResponse": {
+      "fields": {
+        "status": {
+          
+          "type": "ResponseStatus",
+          "id": 1
+        },
+        "metadata": {
+          "type": "ImageMetadata",
+          "id": 2
+        },
+        "unknown": {
+          "type": "UnknownSingleImageSearchResponseComponent",
+          "id": 3
+        }
+      }
+    },
+    "AnnotationLabelFormat": {
+      "fields": {
+        "encoding": {
+          "rule": "repeated",
+          "type": "Encoding",
+          "id": 1
+        }
+      },
+      "nested": {
+        "Encoding": {
+          "values": {
+            "UNKNOWN_ENCODING_A": 1,
+            "UNKNOWN_ENCODING_B": 2
+          }
+        }
+      }
+    },
+    "ApiUseCase": {
+      "fields": {
+        "allowRestrictedHotelPhotos": {
+          "type": "bool",
+          "id": 1
+        },
+        "includeLegacyPanoNeighborData": {
+          "type": "bool",
+          "id": 2
+        }
+      }
+    },
+    "AttributionOptions": {
+      "fields": {
+        "thumbnailSize": {
+          "type": "int32",
+          "id": 1
+        }
+      }
+    },
+    "ClientCapabilities": {
+      "fields": {
+        "renderStrategy": {
+          "rule": "repeated",
+          "type": "RenderStrategy",
+          "id": 1
+        },
+        "allow_3pPhoto": {
+          "type": "bool",
+          "id": 2
+        },
+        "maxDimension": {
+          "type": "ImageSize",
+          "id": 3
+        },
+        "allowCrawledPhoto": {
+          "type": "bool",
+          "id": 4
+        },
+        "allowPhotoSequence": {
+          "type": "bool",
+          "id": 5
+        }
+      }
+    },
+    "CompositeCriterion": {
+      "fields": {
+        "op": {
+          "type": "Op",
+          "id": 1
+        },
+        "criterion": {
+          "type": "Criterion",
+          "id": 2
+        },
+        "compositeCriterion": {
+          "type": "CompositeCriterion",
+          "id": 3
+        },
+        "commonCriterionTag": {
+          "type": "string",
+          "id": 4
+        },
+        "continuationToken": {
+          "type": "string",
+          "id": 5
+        }
+      },
+      "nested": {
+        "Op": {
+          "values": {}
+        }
+      }
+    },
+    "CompressedQbicaModel": {
+      "fields": {
+        "data": {
+          "type": "bytes",
+          "id": 1
+        },
+        "uncompressedPhaseInfo": {
+          "type": "bytes",
+          "id": 3
+        },
+        "query": {
+          "type": "string",
+          "id": 4
+        },
+        "language": {
+          "type": "int32",
+          "id": 5
+        }
+      }
+    },
+    "ContinuationOptions": {
+      "fields": {
+        "numImages": {
+          "type": "int32",
+          "id": 1
+        },
+        "continuationToken": {
+          "type": "string",
+          "id": 2
+        },
+        "pageSize": {
+          "type": "int32",
+          "id": 3
+        }
+      }
+    },
+    "CoverImageOptions": {
+      "fields": {
+        "imageRanking": {
+          "type": "CoverImageRanking",
+          "id": 1
+        },
+        "selectedByOperatorExpirationDays": {
+          "type": "int32",
+          "id": 2
+        },
+        "pinningClient": {
+          "type": "PinningClient",
+          "id": 3
+        }
+      },
+      "nested": {
+        "CoverImageRanking": {
+          "values": {}
+        },
+        "PinningClient": {
+          "values": {}
+        }
+      }
+    },
+    "Criterion": {
+      "fields": {}
+    },
+    "CursorOverlayFormat": {
+      "fields": {
+        "encoding": {
+          
+          "type": "Encoding",
+          "id": 1
+        }
+      },
+      "nested": {
+        "Encoding": {
+          "values": {
+            "NO_CURSOR_OVERLAY": 1,
+            "UNKNOWN_ENCODING": 2
+          }
+        }
+      }
+    },
+    "Date": {
+      "fields": {
+        "year": {
+          "type": "int32",
+          "id": 1
+        },
+        "month": {
+          "type": "int32",
+          "id": 2
+        },
+        "day": {
+          "type": "int32",
+          "id": 3
+        }
+      }
+    },
+    "EligibilityOptions": {
+      "fields": {
+        "eligibilityTypes": {
+          "type": "EligibilityType",
+          "id": 1
+        }
+      }
+    },
+    "EligibilityType": {
+      "fields": {}
+    },
+    "EntryPointOptions": {
+      "fields": {
+        "entryPointType": {
+          "type": "EntryPointType",
+          "id": 1
+        }
+      },
+      "nested": {
+        "EntryPointType": {
+          "values": {}
+        }
+      }
+    },
+    "EventIdMessage": {
+      "fields": {
+        "timeUsec": {
+          
+          "type": "int64",
+          "id": 1
+        },
+        "serverIp": {
+          
+          "type": "fixed32",
+          "id": 2
+        },
+        "processId": {
+          
+          "type": "fixed32",
+          "id": 3
+        }
+      }
+    },
+    "ExperimentalOptions": {
+      "fields": {}
+    },
+    "FailoverOptions": {
+      "fields": {
+        "failoverType": {
+          "type": "FailoverType",
+          "id": 1
+        },
+        "allowFailoverToClosest": {
+          "type": "bool",
+          "id": 2
+        }
+      },
+      "nested": {
+        "FailoverType": {
+          "values": {}
+        }
+      }
+    },
+    "FeatureDescription": {
+      "fields": {
+        "featureId": {
+          "type": "FeatureIdProto",
+          "id": 1
+        },
+        "point": {
+          "rule": "repeated",
+          "type": "Point",
+          "id": 2
+        },
+        "internalSegmentFeatureId": {
+          "type": "FeatureIdProto",
+          "id": 3
+        },
+        "containerFeatureId": {
+          "type": "FeatureIdProto",
+          "id": 4
+        },
+        "location": {
+          "type": "Point",
+          "id": 5
+        }
+      },
+      "nested": {
+        "Point": {
+          "fields": {
+            "latE7": {
+              "type": "fixed32",
+              "id": 1
+            },
+            "lngE7": {
+              "type": "fixed32",
+              "id": 2
+            }
+          }
+        }
+      }
+    },
+    "FeatureIdProto": {
+      "fields": {
+        "cellId": {
+          
+          "type": "fixed64",
+          "id": 1
+        },
+        "fprint": {
+          
+          "type": "fixed64",
+          "id": 2
+        },
+        "temporaryData": {
+          "type": "MessageSet",
+          "id": 3
+        }
+      }
+    },
+    "FeatureSet": {
+      "fields": {
+        "featureId": {
+          
+          "type": "FeatureIdProto",
+          "id": 1
+        },
+        "knowledgeGraphId": {
+          "type": "string",
+          "id": 2
+        },
+        "clusterDocId": {
+          "type": "uint64",
+          "id": 3
+        },
+        "panoSelectionSignal": {
+          "type": "PanoSelectionSignal",
+          "id": 4
+        },
+        "featureIdString": {
+          "type": "string",
+          "id": 5
+        },
+        "primaryGconceptId": {
+          "type": "string",
+          "id": 6
+        },
+        "rankingClient": {
+          "type": "RankingClient",
+          "id": 7
+        }
+      }
+    },
+    "FullSizeFifeUrlOptions": {
+      "fields": {
+        "photosClient": {
+          "type": "ClientCode",
+          "id": 1
+        },
+        "clientNoCaching": {
+          "type": "ClientCode",
+          "id": 2
+        }
+      },
+      "nested": {
+        "ClientCode": {
+          "values": {}
+        }
+      }
+    },
+    "ImageAttribution": {
+      "fields": {
+        "item": {
+          "rule": "repeated",
+          "type": "ImageAttributionItem",
+          "id": 1
+        },
+        "author": {
+          "rule": "repeated",
+          "type": "ImageAuthor",
+          "id": 2
+        }
+      }
+    },
+    "ImageAttributionItem": {
+      "fields": {
+        "name": {
+          "type": "ImageTitle",
+          "id": 1
+        },
+        "url": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "ImageAuthor": {
+      "fields": {
+        "name": {
+          "type": "LocalizedTextProto",
+          "id": 1
+        },
+        "profileUrl": {
+          "type": "string",
+          "id": 2
+        },
+        "imageUrl": {
+          "type": "string",
+          "id": 3
+        },
+        "profileId": {
+          "type": "string",
+          "id": 6
+        }
+      }
+    },
+    "ImageDate": {
+      "fields": {
+        "date": {
+          "type": "Date",
+          "id": 8
+        }
+      }
+    },
+    "ImageDescription": {
+      "fields": {
+        "description": {
+          "rule": "repeated",
+          "type": "LocalizedTextProto",
+          "id": 3
+        }
+      }
+    },
+    "ImageFormatRestrictions": {
+      "values": {
+        "UNKNOWN_FORMAT": 1,
+        "OFFICIAL_FORMAT": 2
+      }
+    },
+    "ImageFrontendType": {
+      "values": {
+        "OFFICIAL": 2,
+        "UNKNOWN": 3,
+        "USER_UPLOADED": 10
+      }
+    },
+    "ImageInformation": {
+      "fields": {
+        "status": {
+          
+          "type": "ImageStatus",
+          "id": 1
+        },
+        "location": {
+          
+          "type": "PanoLocation",
+          "id": 2
+        },
+        "relations": {
+          
+          "type": "PanoRelations",
+          "id": 3
+        },
+        "overlays": {
+          "type": "Overlays",
+          "id": 6
+        },
+        "link": {
+          "rule": "repeated",
+          "type": "PanoLink",
+          "id": 7
+        },
+        "floors": {
+          "rule": "repeated",
+          "type": "PanoFloor",
+          "id": 8
+        },
+        "time": {
+          "rule": "repeated",
+          "type": "PanoTime",
+          "id": 9
+        }
+      }
+    },
+    "ImageKey": {
+      "fields": {
+        "frontend": {
+          "type": "ImageFrontendType",
+          "id": 1
+        },
+        "id": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "ImageMetadata": {
+      "fields": {
+        "status": {
+          
+          "type": "ImageStatus",
+          "id": 1
+        },
+        "pano": {
+          
+          "type": "ImageKey",
+          "id": 2
+        },
+        "tiles": {
+          "type": "ImageTiles",
+          "id": 3
+        },
+        "description": {
+          "type": "ImageDescription",
+          "id": 4
+        },
+        "attribution": {
+          "type": "ImageAttribution",
+          "id": 5
+        },
+        "information": {
+          "rule": "repeated",
+          "type": "ImageInformation",
+          "id": 6
+        },
+        "date": {
+          "type": "ImageDate",
+          "id": 7
+        },
+        "report": {
+          
+          "type": "ImageTakedown",
+          "id": 8
+        }
+      }
+    },
+    "ImageSemanticRestrictions": {
+      "fields": {}
+    },
+    "ImageSize": {
+      "fields": {
+        "height": {
+          "type": "int32",
+          "id": 1
+        },
+        "width": {
+          "type": "int32",
+          "id": 2
+        }
+      }
+    },
+    "ImageStatus": {
+      "fields": {
+        "code": {
+          
+          "type": "StatusCode",
+          "id": 1
+        }
+      },
+      "nested": {
+        "StatusCode": {
+          "values": {
+            "OK": 1
+          }
+        }
+      }
+    },
+    "ImageTakedown": {
+      "fields": {
+        "url": {
+          
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "ImageTiles": {
+      "fields": {
+        "worldSize": {
+          "type": "ImageSize",
+          "id": 3
+        },
+        "tileSize": {
+          "type": "ImageTileSize",
+          "id": 4
+        },
+        "panoId": {
+          "type": "string",
+          "id": 10
+        }
+      }
+    },
+    "ImageTileSize": {
+      "fields": {
+        "possibleSizes": {
+          "rule": "repeated",
+          "type": "ImageSize",
+          "id": 3
+        },
+        "tileSize": {
+          "type": "ImageSize",
+          "id": 4
+        }
+      }
+    },
+    "ImageTitle": {
+      "fields": {
+        "name": {
+          "type": "string",
+          "id": 1
+        }
+      }
+    },
+    "InlineExtraPhotoDataSpec": {
+      "oneofs": {
+        "_metadataSpec": {
+          "oneof": [
+            "metadataSpec"
+          ]
+        }
+      },
+      "fields": {
+        "metadataSpec": {
+          "type": "InlineMetadataSpec",
+          "id": 1,
+          "options": {
+            "proto3_optional": true
+          }
+        }
+      }
+    },
+    "InlineMetadataSpec": {
+      "fields": {}
+    },
+    "LatLng": {
+      "fields": {
+        "lat": {
+          
+          "type": "double",
+          "id": 3
+        },
+        "lng": {
+          
+          "type": "double",
+          "id": 4
+        },
+        "planet": {
+          "type": "Planet",
+          "id": 5
+        }
+      },
+      "nested": {
+        "Planet": {
+          "values": {
+            "EARTH": 1
+          }
+        }
+      }
+    },
+    "LayoutOptions": {
+      "fields": {
+        "thumbnailOptions": {
+          "type": "ThumbnailOptions",
+          "id": 2
+        },
+        "fullSizeFifeUrlOptions": {
+          "type": "FullSizeFifeUrlOptions",
+          "id": 4
+        },
+        "includeCreationMetadata": {
+          "type": "bool",
+          "id": 5
+        },
+        "includeCropBytes": {
+          "type": "bool",
+          "id": 6
+        }
+      }
+    },
+    "Level": {
+      "fields": {
+        "streetviewLevelId": {
+          "type": "uint64",
+          "id": 1
+        },
+        "ordinal": {
+          "type": "float",
+          "id": 2
+        },
+        "levelName": {
+          "type": "LocalizedTextProto",
+          "id": 3
+        },
+        "levelNameAbbreviation": {
+          "type": "LocalizedTextProto",
+          "id": 4
+        }
+      }
+    },
+    "LocalizationContext": {
+      "fields": {
+        "language": {
+          "type": "string",
+          "id": 1
+        },
+        "regionCode": {
+          "type": "string",
+          "id": 2
+        },
+        "acceptLanguage": {
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "LocalizedTextProto": {
+      "fields": {
+        "text": {
+          "type": "string",
+          "id": 1
+        },
+        "language": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "MessageSet": {
+      "fields": {}
+    },
+    "MetadataResponseSpecification": {
+      "fields": {
+        "component": {
+          "rule": "repeated",
+          "type": "ResponseComponent",
+          "id": 1
+        },
+        "navigationChannel": {
+          "type": "NavigationChannelKey",
+          "id": 2
+        },
+        "httpResponseFormat": {
+          "type": "ProtoFormat",
+          "id": 3
+        },
+        "attribution": {
+          "type": "AttributionOptions",
+          "id": 4
+        },
+        "cursorFormats": {
+          "rule": "repeated",
+          "type": "CursorOverlayFormat",
+          "id": 5
+        },
+        "targetOverlayFormats": {
+          "rule": "repeated",
+          "type": "TargetOverlayFormat",
+          "id": 6
+        },
+        "annotationLabelFormat": {
+          "rule": "repeated",
+          "type": "AnnotationLabelFormat",
+          "id": 8
+        },
+        "clientCapabilities": {
+          "type": "ClientCapabilities",
+          "id": 9
+        },
+        "photoAnnotationProperties": {
+          "type": "PhotoAnnotationProperties",
+          "id": 10
+        }
+      },
+      "nested": {
+        "ProtoFormat": {
+          "values": {}
+        }
+      }
+    },
+    "NamedQuery": {
+      "fields": {}
+    },
+    "NavigationChannelKey": {
+      "fields": {}
+    },
+    "Overlay": {
+      "fields": {
+        "size": {
+          "type": "ImageSize",
+          "id": 1
+        },
+        "unknown": {
+          "type": "int32",
+          "id": 2
+        },
+        "data": {
+          "type": "string",
+          "id": 3
+        }
+      }
+    },
+    "Overlays": {
+      "fields": {
+        "cursorFormat": {
+          "type": "CursorOverlayFormat",
+          "id": 1
+        },
+        "cursorOverlay": {
+          "type": "Overlay",
+          "id": 2
+        },
+        "targetFormat": {
+          "type": "TargetOverlayFormat",
+          "id": 3
+        },
+        "targetOverlay": {
+          "type": "Overlay",
+          "id": 4
+        }
+      }
+    },
+    "Pano": {
+      "oneofs": {
+        "_description": {
+          "oneof": [
+            "description"
+          ]
+        }
+      },
+      "fields": {
+        "panoId": {
+          
+          "type": "ImageKey",
+          "id": 1
+        },
+        "location": {
+          
+          "type": "PanoLocation",
+          "id": 2
+        },
+        "description": {
+          "type": "ImageDescription",
+          "id": 4,
+          "options": {
+            "proto3_optional": true
+          }
+        }
+      }
+    },
+    "PanoFloor": {
+      "fields": {
+        "target": {
+          
+          "type": "int32",
+          "id": 1
+        }
+      }
+    },
+    "PanoLink": {
+      "fields": {
+        "target": {
+          
+          "type": "int32",
+          "id": 1
+        },
+        "properties": {
+          
+          "type": "PanoLinkProperties",
+          "id": 2
+        }
+      }
+    },
+    "PanoLinkProperties": {
+      "fields": {
+        "heading": {
+          
+          "type": "double",
+          "id": 4
+        }
+      }
+    },
+    "PanoLocation": {
+      "fields": {
+        "location": {
+          
+          "type": "LatLng",
+          "id": 1
+        },
+        "unknown": {
+          "type": "UnknownPanoLocationComponent",
+          "id": 2
+        },
+        "pov": {
+          
+          "type": "Pov",
+          "id": 3
+        },
+        "level": {
+          "type": "Pov",
+          "id": 4
+        },
+        "countryCode": {
+          "type": "string",
+          "id": 5
+        }
+      }
+    },
+    "PanoRelations": {
+      "fields": {
+        "pano": {
+          "rule": "repeated",
+          "type": "Pano",
+          "id": 1
+        }
+      }
+    },
+    "PanoSelectionSignal": {
+      "fields": {
+        "point": {
+          "rule": "repeated",
+          "type": "Point",
+          "id": 1
+        },
+        "segmentFeatureId": {
+          "type": "FeatureIdProto",
+          "id": 2
+        },
+        "containerFeatureId": {
+          "type": "FeatureIdProto",
+          "id": 3
+        },
+        "location": {
+          "type": "Point",
+          "id": 4
+        },
+        "pureServiceAreaBusiness": {
+          "type": "bool",
+          "id": 5
+        },
+        "featureType": {
+          "type": "int32",
+          "id": 6
+        }
+      },
+      "nested": {
+        "Point": {
+          "fields": {
+            "latE7": {
+              "type": "fixed32",
+              "id": 1
+            },
+            "lngE7": {
+              "type": "fixed32",
+              "id": 2
+            }
+          }
+        }
+      }
+    },
+    "PanoTime": {
+      "fields": {
+        "target": {
+          
+          "type": "int32",
+          "id": 1
+        },
+        "date": {
+          
+          "type": "Date",
+          "id": 2
+        }
+      }
+    },
+    "PhotoAnnotationProperties": {
+      "fields": {
+        "iconType": {
+          "type": "IconType",
+          "id": 1
+        },
+        "thumbnailCropType": {
+          "type": "ThumbnailCropType",
+          "id": 2
+        },
+        "cropSize": {
+          "type": "int32",
+          "id": 3
+        }
+      },
+      "nested": {
+        "IconType": {
+          "values": {}
+        },
+        "ThumbnailCropType": {
+          "values": {}
+        }
+      }
+    },
+    "PhotoByFeatureQuery": {
+      "fields": {
+        "featureSet": {
+          "rule": "repeated",
+          "type": "FeatureSet",
+          "id": 1
+        },
+        "queryOptions": {
+          "type": "PhotoQueryOptions",
+          "id": 2
+        },
+        "tag": {
+          "type": "string",
+          "id": 3
+        },
+        "queryOptionList": {
+          "type": "PhotoQueryOptionList",
+          "id": 5
+        }
+      }
+    },
+    "PhotoByLatLngQuery": {
+      "fields": {
+        "center": {
+          "type": "LatLng",
+          "id": 1
+        },
+        "radius": {
+          "type": "double",
+          "id": 2
+        },
+        "level": {
+          "type": "Level",
+          "id": 3
+        },
+        "preferredRoute": {
+          "rule": "repeated",
+          "type": "FeatureIdProto",
+          "id": 4
+        },
+        "lookAtPoint": {
+          "type": "LatLng",
+          "id": 5
+        },
+        "tag": {
+          "type": "string",
+          "id": 6
+        }
+      }
+    },
+    "PhotoFilterOptions": {
+      "fields": {
+        "formatRestrictions": {
+          "type": "ImageFormatRestrictions",
+          "id": 1
+        },
+        "restrictToAdsEligible": {
+          "type": "bool",
+          "id": 2
+        },
+        "restrictToDirectionsAppropriate": {
+          "type": "bool",
+          "id": 3
+        },
+        "restrictToPhotosWithFocusAttribution": {
+          "type": "bool",
+          "id": 5
+        },
+        "restrictToSyndicationEligible": {
+          "type": "bool",
+          "id": 6
+        },
+        "semanticRestrictions": {
+          "type": "ImageSemanticRestrictions",
+          "id": 7
+        },
+        "restrictToOwnerAttributedPhotos": {
+          "type": "bool",
+          "id": 8
+        },
+        "restrictToVisitorAttributedPhotos": {
+          "type": "bool",
+          "id": 9
+        },
+        "providerIdRestrictions": {
+          "type": "ProviderIdRestrictions",
+          "id": 10
+        },
+        "photoAge": {
+          "type": "TimestampRange",
+          "id": 11
+        },
+        "allowExactDuplicatePhoto": {
+          "type": "bool",
+          "id": 12
+        },
+        "allowNearDuplicatePhoto": {
+          "type": "bool",
+          "id": 13
+        },
+        "restrictToVpsPhotos": {
+          "type": "bool",
+          "id": 14
+        }
+      }
+    },
+    "PhotoQueryOptionList": {
+      "fields": {
+        "options": {
+          "rule": "repeated",
+          "type": "PhotoQueryOptions",
+          "id": 1
+        },
+        "allowDuplicatePhoto": {
+          "type": "bool",
+          "id": 2
+        },
+        "rankingClient": {
+          "type": "RankingClient",
+          "id": 3
+        }
+      }
+    },
+    "PhotoQueryOptions": {
+      "fields": {
+        "filterOptions": {
+          "type": "PhotoFilterOptions",
+          "id": 1
+        },
+        "localizationContext": {
+          "type": "LocalizationContext",
+          "id": 2
+        },
+        "layoutOptions": {
+          "type": "LayoutOptions",
+          "id": 3
+        },
+        "continuationOptions": {
+          "type": "ContinuationOptions",
+          "id": 4
+        },
+        "info": {
+          "type": "MessageSet",
+          "id": 8
+        },
+        "rankingOptions": {
+          "type": "RankingOptions",
+          "id": 9
+        },
+        "retrieveTextLabel": {
+          "type": "bool",
+          "id": 10
+        },
+        "clientCapabilities": {
+          "type": "ClientCapabilities",
+          "id": 11
+        },
+        "failoverOptions": {
+          "type": "FailoverOptions",
+          "id": 12
+        },
+        "entryPointOptions": {
+          "type": "EntryPointOptions",
+          "id": 13
+        },
+        "retrieveFocusAttribution": {
+          "type": "bool",
+          "id": 14
+        },
+        "displayContext": {
+          "type": "GeoPhotoDisplayContext",
+          "id": 15
+        },
+        "queryOptionTag": {
+          "type": "string",
+          "id": 16
+        },
+        "queryOptionPriority": {
+          "type": "int32",
+          "id": 17
+        },
+        "applicableInDisplayContext": {
+          "type": "GeoPhotoDisplayContext",
+          "id": 18
+        },
+        "selectBy": {
+          "type": "SelectByBatch",
+          "id": 20
+        },
+        "semanticIntentOptions": {
+          "type": "SemanticIntentOptions",
+          "id": 21
+        },
+        "eligibilityOptions": {
+          "type": "EligibilityOptions",
+          "id": 22
+        },
+        "coverImageOptions": {
+          "type": "CoverImageOptions",
+          "id": 23
+        },
+        "spannerStalenessOptions": {
+          "type": "SpannerStalenessOptions",
+          "id": 24
+        }
+      },
+      "nested": {
+        "GeoPhotoDisplayContext": {
+          "values": {}
+        }
+      }
+    },
+    "PhotoThumbnailOptions": {
+      "fields": {}
+    },
+    "PixelResponseSpecification": {
+      "fields": {}
+    },
+    "Pov": {
+      "fields": {
+        "heading": {
+          
+          "type": "double",
+          "id": 1
+        },
+        "tilt": {
+          "type": "double",
+          "id": 2
+        },
+        "roll": {
+          "type": "double",
+          "id": 3
+        }
+      }
+    },
+    "ProductSpecialCaseOptions": {
+      "fields": {
+        "apiUseCase": {
+          "type": "ApiUseCase",
+          "id": 1
+        },
+        "tactileUseCase": {
+          "type": "TactileUseCase",
+          "id": 2
+        }
+      }
+    },
+    "ProviderIdRestrictions": {
+      "fields": {
+        "providerIdsWhitelist": {
+          "type": "string",
+          "id": 1
+        },
+        "providerIdsBlacklist": {
+          "type": "string",
+          "id": 2
+        }
+      }
+    },
+    "QueryEmbedding": {
+      "fields": {
+        "values": {
+          "type": "float",
+          "id": 1
+        },
+        "source": {
+          "type": "EmbeddingSource",
+          "id": 2
+        },
+        "embeddingVersion": {
+          "type": "string",
+          "id": 3
+        },
+        "data": {
+          "type": "bytes",
+          "id": 4
+        },
+        "sparseData": {
+          "type": "CompressedQbicaModel",
+          "id": 5
+        }
+      },
+      "nested": {
+        "EmbeddingSource": {
+          "values": {}
+        }
+      }
+    },
+    "RankingClient": {
+      "values": {}
+    },
+    "RankingOptions": {
+      "fields": {
+        "rankingStrategy": {
+          "type": "RankingStrategy",
+          "id": 1
+        },
+        "logisticCurvature": {
+          "type": "double",
+          "id": 2
+        },
+        "logisticOffset": {
+          "type": "double",
+          "id": 3
+        },
+        "distanceRatio": {
+          "type": "double",
+          "id": 4
+        },
+        "timestampOptions": {
+          "type": "TimestampOptions",
+          "id": 5
+        },
+        "qbica": {
+          "type": "CompressedQbicaModel",
+          "id": 6
+        },
+        "photoDescriptor": {
+          "type": "string",
+          "id": 7
+        },
+        "similarityOptions": {
+          "type": "SimilarityOptions",
+          "id": 8
+        },
+        "uprankAnnotatedGsv": {
+          "type": "bool",
+          "id": 9
+        }
+      }
+    },
+    "RankingStrategy": {
+      "values": {
+        "BEST": 1,
+        "CLOSEST": 2
+      }
+    },
+    "RenderStrategy": {
+      "fields": {
+        "frontend": {
+          
+          "type": "ImageFrontendType",
+          "id": 1
+        },
+        "tiled": {
+          
+          "type": "bool",
+          "id": 2
+        },
+        "imageFormat": {
+          
+          "type": "ImageFormat",
+          "id": 3
+        },
+        "tourFormat": {
+          "type": "TourFormat",
+          "id": 4
+        }
+      },
+      "nested": {
+        "ImageFormat": {
+          "values": {
+            "OFFICIAL_FORMAT": 2
+          }
+        },
+        "TourFormat": {
+          "values": {}
+        }
+      }
+    },
+    "ResponseComponent": {
+      "values": {
+        "INCLUDE_TILE_DATA": 1,
+        "INCLUDE_DESCRIPTION": 2,
+        "INCLUDE_COPYRIGHT": 3,
+        "E": 5,
+        "INCLUDE_LINKED_PANORAMAS": 6,
+        "ADDRESS_CONTROL": 8,
+        "K": 11,
+        "L": 12,
+        "M": 13
+      }
+    },
+    "ResponseStatus": {
+      "fields": {
+        "code": {
+          
+          "type": "StatusCode",
+          "id": 1
+        },
+        "errorCode": {
+          "type": "string",
+          "id": 2
+        },
+        "errorMessage": {
+          "type": "string",
+          "id": 3
+        }
+      },
+      "nested": {
+        "StatusCode": {
+          "values": {
+            "OK": 0,
+            "UNKNOWN": 3,
+            "NO_RESULTS": 5
+          }
+        }
+      }
+    },
+    "RequestContext": {
+      "fields": {
+        "productId": {
+          
+          "type": "string",
+          "id": 1
+        },
+        "source": {
+          "type": "RequestSource",
+          "id": 2
+        },
+        "epochId": {
+          "type": "int64",
+          "id": 3
+        },
+        "cacheBehavior": {
+          "type": "CacheBehavior",
+          "id": 4
+        },
+        "policyCountryCode": {
+          "type": "string",
+          "id": 5
+        },
+        "gpsDebugLevel": {
+          "type": "DebugLevel",
+          "id": 6
+        },
+        "httpResponseFormat": {
+          "type": "ProtoFormat",
+          "id": 7
+        },
+        "inlineExtraDataSpec": {
+          "type": "InlineExtraPhotoDataSpec",
+          "id": 8
+        },
+        "queryOrigin": {
+          "type": "string",
+          "id": 9
+        },
+        "superrootParams": {
+          "type": "SuperrootParams",
+          "id": 10
+        },
+        "specialCaseOptions": {
+          "type": "ProductSpecialCaseOptions",
+          "id": 11
+        },
+        "experimentalOptions": {
+          "type": "ExperimentalOptions",
+          "id": 12
+        },
+        "eventId": {
+          "type": "EventIdMessage",
+          "id": 13
+        }
+      },
+      "nested": {
+        "CacheBehavior": {
+          "values": {
+            "NO_CACHING": 0,
+            "STRONG_CACHING": 1
+          }
+        },
+        "DebugLevel": {
+          "values": {}
+        },
+        "ProtoFormat": {
+          "values": {}
+        },
+        "RequestSource": {
+          "values": {}
+        }
+      }
+    },
+    "SelectByBatch": {
+      "fields": {
+        "commonCriterion": {
+          "type": "CompositeCriterion",
+          "id": 1
+        },
+        "forEach": {
+          "type": "NamedQuery",
+          "id": 2
+        }
+      }
+    },
+    "SemanticIntentOptions": {
+      "fields": {
+        "mid": {
+          "type": "string",
+          "id": 1
+        },
+        "numToUprank": {
+          "type": "int32",
+          "id": 2
+        },
+        "queryEmbedding": {
+          "type": "QueryEmbedding",
+          "id": 3
+        },
+        "unusedMids": {
+          "type": "string",
+          "id": 4
+        },
+        "qbica": {
+          "type": "CompressedQbicaModel",
+          "id": 5
+        },
+        "queryEmbeddings": {
+          "type": "QueryEmbedding",
+          "id": 6
+        }
+      }
+    },
+    "SimilarityOptions": {
+      "fields": {
+        "versionedDescriptor": {
+          "type": "VersionedDescriptor",
+          "id": 1
+        },
+        "uprankThreshold": {
+          "type": "double",
+          "id": 2
+        },
+        "numToUprank": {
+          "type": "int32",
+          "id": 3
+        },
+        "semanticRatio": {
+          "type": "double",
+          "id": 4
+        },
+        "enableCutoff": {
+          "type": "bool",
+          "id": 5
+        },
+        "cutoffThreshold": {
+          "type": "double",
+          "id": 6
+        },
+        "removeSameRequestDescriptor": {
+          "type": "bool",
+          "id": 7
+        },
+        "duplicateThreshold": {
+          "type": "double",
+          "id": 8
+        }
+      }
+    },
+    "SpannerStalenessOptions": {
+      "fields": {
+        "staleness": {
+          "type": "Staleness",
+          "id": 1
+        }
+      },
+      "nested": {
+        "Staleness": {
+          "values": {}
+        }
+      }
+    },
+    "SuperrootParams": {
+      "fields": {
+        "sendRpcToGeoPhotoSearch": {
+          "type": "bool",
+          "id": 1
+        },
+        "replaceSnippets": {
+          "type": "bool",
+          "id": 2
+        },
+        "replaceViewcodes": {
+          "type": "bool",
+          "id": 3
+        },
+        "alwaysClearExisting": {
+          "type": "bool",
+          "id": 4
+        }
+      }
+    },
+    "TactileUseCase": {
+      "fields": {
+        "includeAnnotations": {
+          "type": "bool",
+          "id": 1
+        },
+        "allowIneligiblePhotos": {
+          "type": "bool",
+          "id": 2
+        }
+      }
+    },
+    "TakedownUseCase": {
+      "fields": {
+        "includeViperCid": {
+          "type": "bool",
+          "id": 1
+        },
+        "includeAttributionAccounts": {
+          "type": "bool",
+          "id": 2
+        }
+      }
+    },
+    "TargetOverlayFormat": {
+      "fields": {
+        "encoding": {
+          
+          "type": "Encoding",
+          "id": 1
+        }
+      },
+      "nested": {
+        "Encoding": {
+          "values": {}
+        }
+      }
+    },
+    "ThumbnailOptions": {
+      "fields": {
+        "minDimensions": {
+          "type": "ImageSize",
+          "id": 1
+        },
+        "thumbnailSuppressAnimation": {
+          "type": "bool",
+          "id": 2
+        },
+        "photoThumbnailOptions": {
+          "type": "PhotoThumbnailOptions",
+          "id": 3
+        },
+        "forceCrop": {
+          "type": "bool",
+          "id": 4
+        }
+      }
+    },
+    "TimestampOptions": {
+      "fields": {
+        "timestampType": {
+          "type": "TimestampType",
+          "id": 1
+        }
+      },
+      "nested": {
+        "TimestampType": {
+          "values": {}
+        }
+      }
+    },
+    "TimestampRange": {
+      "fields": {
+        "startSeconds": {
+          "type": "double",
+          "id": 1
+        },
+        "endSeconds": {
+          "type": "double",
+          "id": 2
+        }
+      }
+    },
+    "VersionedDescriptor": {
+      "fields": {}
+    },
+    "UnknownPanoLocationComponent": {
+      "fields": {
+        "unknownNumber": {
+          "type": "float",
+          "id": 1
+        }
+      }
+    },
+    "UnknownSingleImageSearchResponseComponent": {
+      "fields": {
+        "unknownNumber": {
+          "type": "float",
+          "id": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "nested": {
+    "StreetviewUrl": {
+      "fields": {
+        "data": {
+          "type": "StreetviewUrlData",
+          "id": 3
+        }
+      }
+    },
+    "StreetviewUrlData": {
+      "fields": {
+        "unknownField": {
+          "type": "UnknownEnum",
+          "id": 1
+        },
+        "pano": {
+          "rule": "required",
+          "type": "Pano",
+          "id": 3
+        }
+      },
+      "nested": {
+        "UnknownEnum": {
+          "values": {
+            "ANY": 1
+          }
+        }
+      }
+    },
+    "Pano": {
+      "fields": {
+        "panoId": {
+          "rule": "required",
+          "type": "string",
+          "id": 1
+        },
+        "uploadType": {
+          "rule": "required",
+          "type": "UploadType",
+          "id": 2
+        },
+        "imageType": {
+          "type": "ImageType",
+          "id": 3
+        },
+        "thumbnail": {
+          "type": "string",
+          "id": 6
+        },
+        "height": {
+          "type": "int32",
+          "id": 7
+        },
+        "width": {
+          "type": "int32",
+          "id": 8
+        }
+      },
+      "nested": {
+        "UploadType": {
+          "values": {
+            "OFFICIAL": 0,
+            "USER_UPLOADED": 10
+          }
+        },
+        "ImageType": {
+          "values": {
+            "PHOTOSPHERE": 11,
+            "PHOTOPATH": 12
+          }
+        }
+      }
+    }
+  }
+}
